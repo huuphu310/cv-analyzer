@@ -69,7 +69,7 @@ The application caches results for 7 days to improve performance for repeated re
 This image is available on Docker Hub:
 
 ```bash
-docker pull username/cv-analyzer:latest
+docker pull huuphu310/cv-analyzer:latest
 ```
 
 Run with:
