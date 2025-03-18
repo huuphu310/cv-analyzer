@@ -1,0 +1,11 @@
+/.venv/
+/cv_cache/
+/sample/
+/.dockerignore
+/.env
+/.env.example
+/.gitignore
+/cv_processor.log
+/docker-compose.yml
+/Dockerfile
+/test_main.http

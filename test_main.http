@@ -1,11 +1,24 @@
-# Test your FastAPI endpoints
+### Test CV Upload Endpoint
+POST http://localhost:8000/upload-cv/
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
-GET http://127.0.0.1:8000/
-Accept: application/json
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="sample_cv.pdf"
+Content-Type: application/pdf
 
-###
+< ./sample/sample.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
-GET http://127.0.0.1:8000/hello/User
-Accept: application/json
+### Health Check (if available)
+GET http://localhost:8000/
 
-###
+### Test Bad Request (non-PDF file)
+POST http://localhost:8000/upload-cv/
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="not_a_pdf.txt"
+Content-Type: text/plain
+
+This is not a PDF file
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
