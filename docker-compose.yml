@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./cv_cache:/app/cv_cache
+      - ./cv_processor.log:/app/cv_processor.log
+    env_file:
+      - .env
+    restart: unless-stopped
