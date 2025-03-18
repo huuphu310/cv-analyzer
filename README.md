@@ -75,5 +75,5 @@ docker pull huuphu310/cv-analyzer:latest
 Run with:
 
 ```bash
-docker run -p 8000:8000 -e OPENAI_API_KEY=your_key_here username/cv-analyzer:latest
+docker run -p 8000:8000 -e OPENAI_API_KEY=your_key_here huuphu310/cv-analyzer:latest
 ```
